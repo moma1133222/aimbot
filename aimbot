@@ -8,5 +8,5 @@ script_key = "pfqyWgVpNdoFTrtsVLjyAGuEdaYmJrAr";
 -- Requeue this same Pastebin loader again
 local q = (queue_on_teleport or queueonteleport or syn and syn.queue_on_teleport)
 if q then
-    q('loadstring(game:HttpGet("https://pastebin.com/raw/XXXXXXXX"))()')
+    q('loadstring(game:HttpGet("https://raw.githubusercontent.com/moma1133222/aimbot/refs/heads/main/aimbot"))()')
 end
