@@ -2,11 +2,21 @@ if not game:IsLoaded() then
     game.Loaded:Wait()
 end
 
+
 script_key = "pfqyWgVpNdoFTrtsVLjyAGuEdaYmJrAr";
 (loadstring or load)(game:HttpGet("https://getnative.cc/script/loader"))()
 
--- Requeue this same Pastebin loader again
+
 local q = (queue_on_teleport or queueonteleport or syn and syn.queue_on_teleport)
 if q then
     q('loadstring(game:HttpGet("https://raw.githubusercontent.com/moma1133222/aimbot/refs/heads/main/aimbot"))()')
 end
+
+
+task.delay(60, function()
+    local ts = game:GetService("TeleportService")
+    local placeId = game.PlaceId
+    local jobId = nil
+    local player = game.Players.LocalPlayer
+    ts:Teleport(placeId, player)
+end)
